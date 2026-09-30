@@ -1,0 +1,158 @@
+@keyframes myAnimation {
+   0% {background-color:blueviolet;}
+   50% {background-color:darkblue;}
+   100% {background-color:blueviolet;}
+}
+@keyframes heading {
+   0% {color:white;}
+   50% {color:green;}
+   100% {color:white;}
+}
+
+
+body {
+   background-color: red;
+   animation-name: myAnimation;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+}
+
+.navbar {
+   display: flex;
+   flex-direction: row;
+   list-style-type: none;
+   justify-content:center;
+   color: white;
+   gap:25px;
+}
+
+.header{
+   display:flex;
+   animation-name:heading;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   justify-content:center;
+}
+
+footer {
+   position:fixed;
+   bottom: 0;
+}
+
+.containertext {
+   background-color:white;
+   display:flex;
+   justify-content: center;
+   max-width: 80%;
+   width: fit-content;
+   margin:auto;
+}
+
+.output{
+   display:grid;
+}
+
+a{
+   text-decoration: none;
+}
+
+.menubutton {
+   background-color: aquamarine;
+   border: 3px solid black;
+   transition: line-height 2s;
+   text-align:center;
+}
+
+.menubutton > p {
+   text-align: center;
+
+}
+
+.menubutton:hover {
+   line-height:1.5em;
+}
+
+#result {
+   color:red;
+}
+.inputContainer > *{
+   display: flex;
+   width: 80%;
+   justify-content: center;
+}
+
+.box {
+   display:flex;
+   border: 1px solid black;
+   width: 50px;
+   height:50px;
+   background-color: white;
+   font-size: 2cqw;
+   text-align:center;
+   justify-content:center;
+}
+@property --boxColor {
+   syntax:"<color>";
+   initial-value:white;
+   inherits:true;
+}
+
+@keyframes flip {
+   0% {background-color: white}
+   49% {background-color:white}
+   50% {transform:scaleY(0); background-color:var(--boxColor)}
+   100% {background-color:var(--boxColor)}
+}
+
+.controls{
+   display: flex;
+   position:absolute;
+   left:80vw;
+   width:fit-content;
+   flex-direction:column;
+   font-family: monospace;
+   background-color:teal;
+}
+
+.controls > *{
+   width:fit-content;
+}
+
+.squarebox{
+   width:30px;
+}
+
+.failElement{
+   position:absolute;
+   white-space: pre;
+   top:10vh;
+   left:10vw;
+   font-size:5em;
+   font-weight:bold;
+   text-align:center;
+   background-color:white;
+   font-family: monospace;
+   border: 5px dashed black;
+   width:80vw;
+   height:80vh;
+}
+
+.keyboardContainer{
+   padding-top:30px;
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+}
+
+.keyboardContainer > *{
+   display:flex;
+   justify-content:center;
+}
+.keyboardContainer > * > *{
+   width:30px;
+   height:30px;
+   text-align:center;
+   background-color:white;
+   border:1px solid black;
+   padding:5px;
+}

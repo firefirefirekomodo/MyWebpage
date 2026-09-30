@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Matrix Calculator</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+   <script src="matrix.js"></script>
+</head>
+<body>
+   <h1 class="header">MATRIX CALCULATOR</h1>
+   <nav class="navbar">
+      <ul class="navbar">
+         <li><a href="index.html"><div class="menubutton">HOME PAGE</div></a></li>
+         <li>CURRENT PAGE</li>
+         <li><a href="weirdle.html">WEIRDLE</a></li>
+      </ul>
+   </nav>
+   <main>
+      <form>
+         <legend>Input the dimensions (limit of 10x10)</legend><br>
+         <input id="n" type="text"></input>
+         <input id="m" type="text"></input>
+         <button type="button" onclick="entered()">Enter</button>
+      </form>
+      <div id="calculationButtons"></div>
+      <div id="matrixOutput" class="output"></div>
+      <p id="result"></p>
+   </main>
+</body>
+<footer>
+   By Oliver Worthy
+</footer>
+</html>

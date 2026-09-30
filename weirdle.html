@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>My WebPage</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+   <script src="weirdle.js"></script>
+</head>
+<body>
+   <h1 class="header">WEIRDLE</h1>
+   <nav class="navbar">
+      <ul class="navbar">
+         <li><a href="index.html"><div class="menubutton">HOME PAGE</div></a></li>        
+         <li><a class="wrapper" href="matrix.html"><div class="menubutton"><p>MATRIX CALCULATOR</p></div></a></li>
+         <li><a class="wrapper" href="matrix.html"><div class="menubutton">PAGE 3</div></a></li>
+      </ul>
+   </nav>
+   <label for="Modes">Choose a mode</label>
+   <select id="Options"onchange="selectMode()"name="Modes">
+      <option value="normal">Normal</option>
+      <option value="backwards">Backwards</option>
+   </select>
+   <div class="controls">
+      <button onclick="refreshBoard()"id="newword">New Word</button>
+      Change the amount of guesses you have!
+      <div>
+         <button onclick="increment()"class="squarebox">+</button>
+         <button onclick="decrement()"class="squarebox">-</button>
+      </div>
+   </div>
+   <div class="inputContainer" id="mainDiv">
+   </div>
+   <div class="keyboardContainer" id="keyboard">QWERTYUIOP ASDFGHJKL ZXCVBNM</div>
+</body>
+</html>
