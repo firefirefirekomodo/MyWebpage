@@ -5,7 +5,7 @@ var word_length = 5;
 var row_counter = 0;
 var words = [];
 var word = "";
-fetch("../letterwords.json")
+fetch("../resources/letterwords.json")
    .then(response => response.json()
    )
    .then(data => {
@@ -135,7 +135,6 @@ document.addEventListener("keydown", (event) => {
    let last_element = nodesList[word_length-1];
    let lost_nodes = [];
    let yellow_list = word;
-   console.log(word);
    if((list.includes(key) == false && event.key !== "Backspace" && event.key !== "Enter")){
       return;
    }
@@ -218,7 +217,6 @@ document.addEventListener("keydown", (event) => {
          }
 
       }
-      console.log(yellow_list);
       if (allGreen(yellow_list) == true){
          let winDiv = document.createElement('div');
          winDiv.textContent = `You won the wordle!\r\nThe answer was ${word}\r\nGenerating a new word now...`;
@@ -243,9 +241,6 @@ document.addEventListener("keydown", (event) => {
    }
    }
    else{
-      console.log("Updating element!");
-      // if(last_element.textContent == "") 
-
       if(index < 5) {
          let element = nodesList[index];
          element.textContent = event.key.toUpperCase();
