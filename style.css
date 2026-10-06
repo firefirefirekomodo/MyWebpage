@@ -11,10 +11,10 @@
 
 
 body {
-   background-color: red;
-   animation-name: myAnimation;
+   background-color: black;
+   /* animation-name: myAnimation;
    animation-duration: 10s;
-   animation-iteration-count: infinite;
+   animation-iteration-count: infinite; */
 }
 
 .navbar {
@@ -40,7 +40,9 @@ footer {
 }
 
 .containertext {
-   background-color:white;
+   background-color:rgb(170, 159, 159);
+   font-family: 'Times New Roman';
+   border: 15px solid black;
    display:flex;
    justify-content: center;
    max-width: 80%;
@@ -57,9 +59,10 @@ a{
 }
 
 .menubutton {
-   background-color: aquamarine;
+   background-image: linear-gradient(to bottom right,aquamarine,white);
    border: 3px solid black;
-   transition: line-height 2s;
+   line-height: 1;
+   transition: line-height 1s ease;
    text-align:center;
 }
 
@@ -69,16 +72,26 @@ a{
 }
 
 .menubutton:hover {
-   line-height:1.5em;
+   line-height:1.5;
 }
 
 #result {
    color:red;
 }
+.inputContainer {
+   display: flex;
+   flex-direction:column;
+   justify-content: center;
+   align-items:center;
+   height: 100%;
+}
+
 .inputContainer > *{
    display: flex;
+   flex: 1;
    width: 80%;
    justify-content: center;
+   align-items:center;
 }
 
 .box {
@@ -116,6 +129,7 @@ a{
 
 .controls > *{
    width:fit-content;
+
 }
 
 .squarebox{
@@ -130,9 +144,9 @@ a{
    font-size:5em;
    font-weight:bold;
    text-align:center;
-   background-color:white;
+   background-image:linear-gradient(to bottom, gray, rgb(53, 49, 49));
    font-family: monospace;
-   border: 5px dashed black;
+   border: 5px dashed rgb(196, 179, 131);
    width:80vw;
    height:80vh;
 }
@@ -155,4 +169,8 @@ a{
    background-color:white;
    border:1px solid black;
    padding:5px;
+}
+
+#chooseMode {
+   color: yellow;
 }
