@@ -17,6 +17,7 @@ function entered(){
             let a = document.createElement("input");
             a.type = "text";
             a.id = `${j} ${i}`;
+            a.style.width = `${100/x}vw`;
             a.defaultValue = 0;
             output.appendChild(a);
       }
